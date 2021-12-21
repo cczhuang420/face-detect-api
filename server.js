@@ -50,4 +50,7 @@ app.post("/imageApi", (req, res) => {
   handleImageAPI(req, res);
 });
 
-app.listen(3000);
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`App is running on the PORT ${port}`);
+});
